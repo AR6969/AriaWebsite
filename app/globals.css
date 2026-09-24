@@ -1120,6 +1120,17 @@ em {
 .contact-form textarea {
   resize: vertical;
 }
+.form-trap {
+  position: absolute;
+  left: -9999px;
+}
+.contact-form {
+  position: relative;
+}
+.contact-form .button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;

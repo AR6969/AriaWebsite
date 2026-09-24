@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { Analytics } from "@/components/analytics";
 import { Header } from "@/components/header";
 import { Footer, JsonLd } from "@/components/ui";
 import { mainOffice, site } from "@/lib/site";
@@ -33,6 +34,7 @@ export default function RootLayout({
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <Analytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         <JsonLd
           data={{
             "@context": "https://schema.org",

@@ -55,3 +55,8 @@ Nine owner-supplied Vimeo testimonials (lib/videos.ts), shown on /reviews and fo
 
 ## Live Google rating
 `lib/google-rating.ts` pulls rating + review count from the Google Places API (refreshed daily). Set `GOOGLE_PLACES_API_KEY` and `GOOGLE_PLACE_ID` in Vercel env vars. Without them it shows the last known 5.0. The review count stays hidden until it reaches `SHOW_COUNT_FROM` (25).
+
+## Lead form and conversion tracking (Vercel environment variables)
+- `RESEND_API_KEY`, `LEAD_FROM_EMAIL` (sender on a domain verified in Resend, e.g. `website@instalawgroup.com`), optional `LEAD_TO_EMAIL` (defaults to info@instalawgroup.com). Without these, the form falls back to preparing an email on the visitor's device.
+- `NEXT_PUBLIC_GA_ID` (GA4 measurement ID). Events: `phone_call_click`, `email_click`, `generate_lead`. Mark `phone_call_click` and `generate_lead` as key events in GA4.
+- Privacy page updated to describe form delivery, Google Analytics, and Vimeo.

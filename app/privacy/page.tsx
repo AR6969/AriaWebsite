@@ -2,7 +2,7 @@ import { Breadcrumbs } from "@/components/ui";
 import { pageMeta, site } from "@/lib/site";
 export const metadata = pageMeta(
   "Privacy & Website Terms",
-  "How this website handles consultation inquiries, email preparation, and general legal information.",
+  "How the InstaLaw Group website handles case review requests, analytics, embedded videos, and general legal information.",
   "/privacy",
 );
 export default function Privacy() {
@@ -10,17 +10,15 @@ export default function Privacy() {
     <section className="wrap inner-hero article-prose">
       <Breadcrumbs items={[{ label: "Privacy & terms", href: "/privacy" }]} />
       <p className="eyebrow">PRIVACY & WEBSITE TERMS</p>
-      <h1>
-        Your information.
-        <br />
-        Handled thoughtfully.
-      </h1>
-      <h2>Contacting the firm</h2>
+      <h1>Privacy Policy & Website Terms</h1>
+      <h2>Case review requests</h2>
       <p>
-        The consultation form prepares an email on your device. The form itself
-        does not submit your information to a website database. You choose
-        whether to open your email application and send the message. Email sent
-        to the firm is processed by the email services involved in delivery.
+        When you submit the case review form, the information you enter (name,
+        phone number, case type, and any optional email or description) is sent
+        to the firm by email through an email delivery provider. The website
+        does not keep a database of submissions. If direct sending is
+        unavailable, the form instead prepares an email on your device that you
+        can choose to send.
       </p>
       <h2>Keep initial inquiries brief</h2>
       <p>
@@ -32,10 +30,12 @@ export default function Privacy() {
       <h2>Website operation</h2>
       <p>
         The hosting provider may process technical information such as IP
-        addresses and request logs to deliver and protect the site. This
-        implementation does not add advertising pixels or third-party analytics
-        scripts. Links to external websites are subject to those websites’
-        privacy practices.
+        addresses and request logs to deliver and protect the site. The site may
+        use Google Analytics to understand how visitors use it, for example
+        which pages lead to calls or case review requests. Google Analytics uses
+        cookies; you can block them in your browser settings. Client video
+        reviews are hosted by Vimeo and load only when you press play. Links to
+        external websites are subject to those websites’ privacy practices.
       </p>
       <h2>No attorney-client relationship</h2>
       <p>
