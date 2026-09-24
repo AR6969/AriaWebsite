@@ -29,6 +29,9 @@ export function Header() {
               InstaLaw<span className="brand-group">G R O U P</span>
             </span>
           </Link>
+          <a className="header-call" href={site.tel}>
+            Call now
+          </a>
           <button
             className="menu-toggle"
             type="button"

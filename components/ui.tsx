@@ -225,7 +225,7 @@ export function Footer() {
         </div>
       </footer>
       <div className="mobile-contact">
-        <a href={site.tel}>Call {site.phone}</a>
+        <a href={site.tel}>Call now · Free consult</a>
         <Link href="/contact">
           Free case review <Arrow />
         </Link>
