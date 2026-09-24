@@ -22,13 +22,14 @@ export default function OurTeam() {
         </p>
       </section>
       <section className="wrap team-list">
-        {team.map((m) => (
+        {team.map((m, i) => (
           <article key={m.slug} id={m.slug}>
             <div className="team-photo">
               <Image
                 src={m.photo}
                 alt={m.alt}
                 fill
+                loading={i === 0 ? "eager" : "lazy"}
                 sizes="(max-width: 760px) 100vw, 360px"
               />
             </div>
