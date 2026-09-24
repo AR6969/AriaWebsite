@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InstaLaw Group website
 
-## Getting Started
+Next.js App Router, TypeScript, Tailwind CSS, and ESLint. Personal injury is the primary practice; immigration is secondary.
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```sh
+npm ci
+npm run dev -- -p 3001
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Production checks:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm run lint
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content and configuration
+- `lib/site.ts`: firm contact information, canonical origin, shared FAQs.
+- `lib/practices.ts`: five injury practice pages.
+- `components/`: header, navigation, footer, calls to action, email preparation form.
+- `app/`: homepage, overview/service pages, attorney, contact, privacy, SF service area, metadata endpoints.
+- `docs/RESEARCH.md`: sources, owner decisions, contradictions and outstanding factual checks.
 
-## Learn More
+`NEXT_PUBLIC_SITE_URL` optionally sets the public HTTPS origin. Default: `https://aria-website-lyart-three.vercel.app`. Set it to the custom domain only when the new site is live there, then rebuild. Do not include a trailing path.
 
-To learn more about Next.js, take a look at the following resources:
+## Contact behavior
+Phone and email are live links using the owner's confirmed InstaLaw contact details. The form prepares an email locally and asks the visitor to open their email app and send it. It does not submit or store a lead. A direct intake integration is intentionally not configured per the owner's preference.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
+Use Vercel's Next.js framework preset, repository root, and default build/output settings. Changes are local until committed and pushed. Confirm the outstanding address, credential, and attorney-copy items in `docs/RESEARCH.md` before public launch. Search rankings depend on content, local business profile consistency, competition, and ongoing work; metadata alone does not guarantee placement.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Local cloud-file issue
+The Desktop folder returned empty contents for cloud-only dependencies and `next-env.d.ts` during setup. These have been restored, and build/lint now pass in the original project folder. If this recurs, keep project files downloaded in Finder; `npm ci` restores dependencies. The development preview runs from this folder on port 3001.

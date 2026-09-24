@@ -43,3 +43,6 @@ next-env.d.ts
 # Local source photo archives
 /*.pdf
 /*.zip
+
+# Local research screenshots
+/Screenshot*.png
